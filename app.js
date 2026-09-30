@@ -9,7 +9,7 @@ const certificates = [
     duration: '1.00 h lectiva',
     score: null,
     description: 'Formación orientada a operaciones y procesos de caja dentro de tienda.',
-    image: './assets/certificates/01.png'
+    image: './assets/certificados/cert-nivel-intermedio-2026_-operaciones---procesos-de-cajas--76233069-mateo.png'
   },
   {
     id: '02',
@@ -21,7 +21,7 @@ const certificates = [
     duration: '1.00 h lectiva',
     score: '16',
     description: 'Capacitación sobre actuación y respuesta ante situaciones de emergencia.',
-    image: './assets/certificates/02.png'
+    image: './assets/certificados/cert-nivel-intermedio-2026_-sst---acción-ante-emergencia--76233069-mateo.png'
   },
   {
     id: '03',
@@ -33,7 +33,7 @@ const certificates = [
     duration: '1.00 h lectiva',
     score: null,
     description: 'Formación vinculada a calidad y prevención de enfermedades transmitidas por alimentos.',
-    image: './assets/certificates/03.png'
+    image: './assets/certificados/cert-nivel-intermedio-2026_-calidad---etas--76233069-mateo.png'
   },
   {
     id: '04',
@@ -45,7 +45,7 @@ const certificates = [
     duration: '1.00 h lectiva',
     score: null,
     description: 'Curso de ética y cumplimiento aplicado al entorno laboral.',
-    image: './assets/certificates/04.png'
+    image: './assets/certificados/cert-mass-_-ética-y-compliance-2026--76233069-mateo.png'
   },
   {
     id: '05',
@@ -57,7 +57,7 @@ const certificates = [
     duration: '1.00 h lectiva',
     score: '20',
     description: 'Introducción a prácticas de seguridad para el uso adecuado de equipos.',
-    image: './assets/certificates/05.png'
+    image: './assets/certificados/cert-nivel-introductorio-2026_-sst---uso-seguro-de-equipos-76233069-mateo.png'
   },
   {
     id: '06',
@@ -69,7 +69,7 @@ const certificates = [
     duration: '1.00 h lectiva',
     score: '20',
     description: 'Introducción a la identificación de peligros, evaluación de riesgos y controles.',
-    image: './assets/certificates/06.png'
+    image: './assets/certificados/cert-nivel-introductorio-2026-_-sst---iperc-76233069-mateo.png'
   },
   {
     id: '07',
@@ -81,7 +81,7 @@ const certificates = [
     duration: '1.00 h lectiva',
     score: '20',
     description: 'Buenas prácticas introductorias para mantener espacios de trabajo seguros y ordenados.',
-    image: './assets/certificates/07.png'
+    image: './assets/certificados/cert-nivel-introductorio-2026-_-sst---orden-y-limpieza--76233069-mateo.png'
   },
   {
     id: '08',
@@ -93,7 +93,7 @@ const certificates = [
     duration: '1.00 h lectiva',
     score: '20',
     description: 'Principios de seguridad para la manipulación y traslado de cargas pesadas.',
-    image: './assets/certificates/08.png'
+    image: './assets/certificados/cert-nivel-introductorio-2026-_-sst---manipulación-de-carga-pesada--76233069-mateo.png'
   },
   {
     id: '09',
@@ -105,7 +105,7 @@ const certificates = [
     duration: '1.00 h lectiva',
     score: null,
     description: 'Formación introductoria relacionada con prevención y convivencia laboral respetuosa.',
-    image: './assets/certificates/09.png'
+    image: './assets/certificados/cert-nivel-introductorio-2026_-sostenibilidad---acoso-sexual-laboral--76233069-mateo.png'
   },
   {
     id: '10',
@@ -117,7 +117,7 @@ const certificates = [
     duration: '1.00 h lectiva',
     score: null,
     description: 'Introducción a conceptos y prácticas de sostenibilidad en el entorno de trabajo.',
-    image: './assets/certificates/10.png'
+    image: './assets/certificados/cert-nivel-introductorio-2026_-sostenibilidad---sostenibilidad--76233069-mateo.png'
   },
   {
     id: '11',
@@ -129,7 +129,7 @@ const certificates = [
     duration: '1.00 h lectiva',
     score: null,
     description: 'Formación introductoria sobre higiene de manos y prácticas básicas de calidad.',
-    image: './assets/certificates/11.png'
+    image: './assets/certificados/cert-nivel-introductorio-2026_-calidad---lavado-de-manos--76233069-mateo.png'
   },
   {
     id: '12',
@@ -141,7 +141,7 @@ const certificates = [
     duration: '1.00 h lectiva',
     score: null,
     description: 'Introducción a buenas prácticas de manipulación aplicadas a calidad e inocuidad.',
-    image: './assets/certificates/12.png'
+    image: './assets/certificados/cert-nivel-introductorio-2026_-calidad---buenas-practicas-de-manipulación--76233069-mateo.png'
   }
 ];
 
@@ -179,7 +179,7 @@ function escapeHtml(value) {
 
 function getRadius() {
   const width = window.innerWidth;
-  const cardWidth = width <= 620 ? 196 : width <= 860 ? 230 : 270;
+  const cardWidth = width <= 620 ? 196 : width <= 860 ? 206 : (window.innerHeight <= 820 ? 172 : 196);
   const gap = width <= 620 ? 12 : 18;
   const raw = (cardWidth + gap) / (2 * Math.sin(Math.PI / certificates.length));
   return Math.min(raw, width * 0.95);
