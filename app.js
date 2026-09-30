@@ -179,9 +179,22 @@ function escapeHtml(value) {
 
 function getRadius() {
   const width = window.innerWidth;
-  const cardWidth = width <= 620 ? 190 : width <= 860 ? 200 : (window.innerHeight <= 820 ? 165 : 190);
-  const gap = width <= 620 ? 14 : 22;
-  const raw = (cardWidth + gap) / (2 * Math.sin(Math.PI / certificates.length));
+
+  const cardWidth =
+    width <= 620
+      ? 205
+      : width <= 860
+        ? 220
+        : window.innerHeight <= 820
+          ? 200
+          : 230;
+
+  const gap = width <= 620 ? 18 : 28;
+
+  const raw =
+    (cardWidth + gap) /
+    (2 * Math.sin(Math.PI / certificates.length));
+
   return Math.min(raw, width * 0.95);
 }
 
@@ -226,12 +239,20 @@ function positionCards(radius) {
     const relative = ((index - activeIndex) % certificates.length + certificates.length) % certificates.length;
     const signed = relative > certificates.length / 2 ? relative - certificates.length : relative;
     const angle = signed * angleStep + rotationOffset();
-    const normalized = Math.cos(angle * Math.PI / 180);
+    const normalized = Math.cos(angle * Math.PI / 140);
     const depth = (normalized + 1) / 2;
     const opacity = 0.2 + depth * 0.8;
-    const scale = 0.72 + depth * 0.28;
+    
+    // 1. Aumentamos el tamaño base (de 0.72 a 0.8) y el multiplicador de escala máxima
+    const scale = 0.80 + depth * 0.30; 
+    
     const blur = Math.max(0, (1 - depth) * 2.5);
-    card.style.transform = `rotateY(${angle}deg) translateZ(${radius}px) scale(${scale})`;
+    
+    // 2. Definimos la separación desde arriba (puedes ajustar los 20px a tu gusto)
+    const topSeparation = 20; 
+
+    // 3. Agregamos translateY para empujar las tarjetas hacia abajo y separarlas de arriba
+    card.style.transform = `rotateY(${angle}deg) translateZ(${radius}px) translateY(${topSeparation}px) scale(${scale})`;
     card.style.opacity = opacity.toFixed(3);
     card.style.filter = `blur(${blur}px)`;
     card.style.zIndex = String(Math.round(depth * 100));
