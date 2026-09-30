@@ -1,6 +1,6 @@
-# Mass · Certificate Vault
+# Mass · Bóveda de Certificados
 
-Página estática interactiva para presentar 12 certificaciones de capacitación de Mateo Gomero Rios en un solo enlace.
+Página estática interactiva para presentar 12 certificaciones de capacitación ios en un solo enlace.
 
 ## Concepto
 
@@ -19,8 +19,6 @@ Coloca tus 12 PNG en:
 
 `assets/certificates/`
 
-con estos nombres:
-
 1. `01-procesos-de-cajas.png`
 2. `02-accion-ante-emergencia.png`
 3. `03-etas.png`
@@ -36,11 +34,11 @@ con estos nombres:
 
 Si usas otros nombres, cambia únicamente la propiedad `image` correspondiente en `app.js`.
 
-## Probar localmente
+## Prueba localm
 
 Como es una página estática, puedes abrir `index.html` directamente. Para una experiencia de desarrollo más fiel a producción, también puedes usar una extensión de servidor local como Live Server.
 
-## Publicar con GitHub Pages
+## Publique en GitHub Pages
 
 1. Crea un repositorio público, por ejemplo `mass-certificaciones`.
 2. Sube todo el contenido del proyecto a la rama `main`.
@@ -48,10 +46,6 @@ Como es una página estática, puedes abrir `index.html` directamente. Para una 
 4. En `Build and deployment`, selecciona `Deploy from a branch`.
 5. Selecciona `main` y `/ (root)`.
 6. Guarda y espera a que GitHub publique el sitio.
-
-La URL quedará con el patrón:
-
-`https://MateoRiosdev.github.io/mass-certificaciones/`
 
 ## Referencias
 
