@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#030712" />
+    <meta name="description" content="Certificaciones de capacitación de Mateo Gomero Rios — 2026." />
+    <meta property="og:title" content="Certificaciones · Mateo Gomero Rios" />
+    <meta property="og:description" content="Colección interactiva de 12 certificaciones de capacitación." />
+    <meta property="og:type" content="website" />
+    <title>Certificaciones · Mateo Gomero Rios</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="ambient ambient-one" aria-hidden="true"></div>
+      <div class="ambient ambient-two" aria-hidden="true"></div>
+      <div class="noise" aria-hidden="true"></div>
+
+      <header class="topbar container">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <span class="brand-mark">MR</span>
+          <span class="brand-copy">
+            <strong>MateoRios<span>dev</span></strong>
+            <small>Certificate Vault / 2026</small>
+          </span>
+        </a>
+
+        <div class="top-actions">
+          <button class="icon-button" id="themeToggle" type="button" aria-label="Cambiar a modo claro">
+            <span class="icon sun-icon" aria-hidden="true">☼</span>
+            <span class="icon moon-icon" aria-hidden="true">◐</span>
+          </button>
+          <a class="github-button" href="https://github.com/MateoRiosdev" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.76-.24.76-.54v-2.04c-3.1.68-3.75-1.31-3.75-1.31-.51-1.29-1.24-1.64-1.24-1.64-1.01-.7.08-.69.08-.69 1.12.08 1.7 1.15 1.7 1.15.99 1.7 2.6 1.2 3.24.92.1-.72.39-1.2.71-1.48-2.47-.28-5.06-1.23-5.06-5.48 0-1.21.43-2.2 1.15-2.98-.12-.28-.5-1.41.11-2.94 0 0 .94-.3 3.08 1.14a10.66 10.66 0 0 1 5.6 0c2.14-1.44 3.08-1.14 3.08-1.14.61 1.53.23 2.66.11 2.94.72.78 1.15 1.77 1.15 2.98 0 4.26-2.59 5.19-5.06 5.47.4.35.75 1.04.75 2.1v3.1c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/></svg>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </header>
+
+      <main id="inicio">
+        <section class="hero container">
+          <div class="eyebrow"><span class="pulse-dot"></span> 12 CERTIFICACIONES · 2026</div>
+          <h1>Una bóveda para mis <span>certificaciones.</span></h1>
+          <p class="hero-text">Una colección interactiva de cursos completados, diseñada para que cada certificado pueda explorarse con un gesto, un clic y un poco de profundidad.</p>
+          <div class="hero-meta">
+            <span><b>12</b> certificados</span>
+            <span class="meta-separator">·</span>
+            <span><b>2026</b> periodo</span>
+            <span class="meta-separator">·</span>
+            <span><b>Mass</b> capacitación</span>
+          </div>
+        </section>
+
+        <section class="vault-section container" aria-labelledby="vault-title">
+          <div class="section-head">
+            <div>
+              <span class="section-kicker">CERTIFICATE VAULT</span>
+              <h2 id="vault-title">Explora las fichas</h2>
+            </div>
+            <div class="view-controls" aria-label="Controles del carrusel">
+              <button class="round-button" id="prevButton" type="button" aria-label="Certificación anterior">←</button>
+              <span class="counter"><strong id="activeNumber">01</strong> / <span id="totalNumber">12</span></span>
+              <button class="round-button" id="nextButton" type="button" aria-label="Certificación siguiente">→</button>
+            </div>
+          </div>
+
+          <div class="vault-stage" id="vaultStage">
+            <div class="orbit orbit-a" aria-hidden="true"></div>
+            <div class="orbit orbit-b" aria-hidden="true"></div>
+            <div class="center-glow" aria-hidden="true"></div>
+            <div class="carousel" id="carousel" aria-live="polite"></div>
+            <div class="drag-hint" id="dragHint"><span>↔</span> Arrastra para girar</div>
+            <div class="center-label">
+              <span class="center-label-line"></span>
+              <span>FOCUS</span>
+              <span class="center-label-line"></span>
+            </div>
+          </div>
+
+          <div class="active-detail" id="activeDetail"></div>
+
+          <div class="mobile-actions">
+            <button class="primary-button" id="openActive" type="button">Ver certificación</button>
+          </div>
+        </section>
+
+        <section class="about container">
+          <div class="about-card">
+            <div class="about-symbol">✦</div>
+            <div>
+              <span class="section-kicker">VERIFICACIÓN VISUAL</span>
+              <h2>Todo en un solo enlace.</h2>
+              <p>En lugar de publicar doce imágenes por separado, esta página concentra la colección en una experiencia navegable. El visitante puede girar las fichas, seleccionar una y abrir el certificado completo.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer container">
+        <div>© 2026 Creado por <a href="https://github.com/MateoRiosdev" target="_blank" rel="noreferrer">MateoRiosdev</a>. Todos los derechos reservados.</div>
+        <div class="footer-note">Hecho para compartir certificaciones de forma simple.</div>
+      </footer>
+    </div>
+
+    <dialog class="certificate-modal" id="certificateModal" aria-labelledby="modalTitle">
+      <div class="modal-backdrop" data-close-modal></div>
+      <div class="modal-panel">
+        <div class="modal-toolbar">
+          <div>
+            <span class="section-kicker">CERTIFICADO</span>
+            <h2 id="modalTitle">Certificación</h2>
+          </div>
+          <button class="icon-button close-button" type="button" id="closeModal" aria-label="Cerrar certificado">×</button>
+        </div>
+        <div class="certificate-frame">
+          <img id="modalImage" src="" alt="Certificado" />
+          <div class="image-placeholder" id="imagePlaceholder">
+            <strong>PNG pendiente</strong>
+            <span>Coloca tu archivo en <code>assets/certificates/</code>.</span>
+          </div>
+        </div>
+        <div class="modal-info" id="modalInfo"></div>
+      </div>
+    </dialog>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
